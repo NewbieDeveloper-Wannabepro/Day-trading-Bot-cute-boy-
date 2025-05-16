@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esteem Signal </title>
+   <link rel="shortcut icon" href="./images/asset/Create a anime profile picture male black.jpg" type="image/x-icon">
+   <link rel="stylesheet" href="bot.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>
+            <i class="fas fa-chart-line"></i> Esteem  Bot signal 
+        </h1>
+
+        <div class="control-panel">
+            <select id="currencyPair">
+                <option value="OANDA:EUR_USD">EUR/USD</option>
+                <option value="OANDA:GBP_USD">GBP/USD</option>
+                <option value="OANDA:USD_JPY">USD/JPY</option>
+                <option value="OANDA:AUD_USD">AUD/USD</option>
+                <option value="OANDA:USD_CAD">USD/CAD</option>
+            </select>
+            <button id="testAlertBtn" class="btn test-btn">
+                <i class="fas fa-bell"></i> wake up call!!
+            </button>
+        </div>
+
+        <div class="dashboard">
+            <div class="scanner-panel">
+                <div class="price-display">
+                    <div class="pair-header">
+                        <div class="pair-name" id="pairName">EUR/USD</div>
+                        <div class="connection-status">
+                            <span class="connection-dot" id="connectionDot"></span>
+                            <span id="connectionStatus">Connecting...</span>
+                        </div>
+                    </div>
+                    <div class="indicator-label">Current Price</div>
+                    <div id="currentPrice">--.--</div>
+                    <div id="signal">Waiting for signal...</div>
+                </div>
+
+                <div class="indicators">
+                    <div class="indicator-box">
+                        <div class="indicator-label">RSI (14)</div>
+                        <div class="indicator-value" id="rsiValue">--.--</div>
+                    </div>
+                    <div class="indicator-box">
+                        <div class="indicator-label">EMA (9)</div>
+                        <div class="indicator-value" id="ema9Value">--.--</div>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn buy-btn" id="buyBtn">
+                        <i class="fas fa-arrow-up"></i> BUY (CALL)
+                    </button>
+                    <button class="btn sell-btn" id="sellBtn">
+                        <i class="fas fa-arrow-down"></i> SELL (PUT)
+                    </button>
+                </div>
+            </div>
+
+            <div class="history-panel">
+                <div class="history-title">
+                    Signal History
+                    <button id="clearHistoryBtn" class="clear-history">
+                        <i class="fas fa-trash-alt"></i> Clear
+                    </button>
+                </div>
+                <div class="signal-log" id="signalLog">
+                    <!-- Signals will appear here dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <div class="status">
+            <small>1-minute timeframe • real time Market data• <span id="lastUpdate">Not updated yet</span></small>
+        </div>
+    </div>
+
+  <script src="bot.js"></script>
+</body>
+</html>
